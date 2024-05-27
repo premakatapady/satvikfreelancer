@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Insurance Adviser</title>
+    <link rel="stylesheet" href="d.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SK</div>
+        <h1>Satvik.S.K - freelancer</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content" id="About">
+            <h1>Welcome to My Portfolio</h1>
+            <img src="C:\Users\Sathwik .Sk\OneDrive\Pictures\WhatsApp Image 2024-03-28 at 20.53.13_2f2ae18e.jpg" alt="John Doe" class="profile-image">
+            <p>I am Satvik.S.k, a freelancer. I specialize in web designing,presentation and excel sheet,editing,graphic designing.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>My Services</h2>
+            <ul id="wpeege">
+                <li>
+                    <img src="https://images.pexels.com/photos/3183179/pexels-photo-3183179.jpeg" alt="Web desinging">
+                    <h3>Web Designing</h3>
+                </li>
+                <li>
+                    <img src="https://static2.makeuseofimages.com/wp-content/uploads/2016/07/powerpoint-with-excel.jpg" alt="ppt and excel making">
+                    <h3>ppt and excel making</h3>
+                </li>
+                <li>
+                    <img src="https://images.pexels.com/photos/8102677/pexels-photo-8102677.jpeg?cs=srgb&dl=pexels-ron-lach-8102677.jpg&fm=jpg" alt="Editing">
+                    <h3>Editing</h3>
+                </li>
+                <li>
+                    <img src="https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg" alt="Graphic designing">
+                    <h3>Graphic designing</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <p>"John has been our go-to insurance adviser for the past 10 years. He is knowledgeable and always finds the best policies for our needs." - Jane Smith</p>
+            <p>"Thanks to John, I have peace of mind knowing my family is well protected." - Robert Johnson</p>
+            <a href="#contact" onclick="scrollToSection('contact')">Contact Satvik</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <p id="formResponse"></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Satvik.sk. All Rights Reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (name && email && message) {
+            document.getElementById('formResponse').innerText = 'Thank you for your message. I will get back to you shortly.';
+            document.getElementById('contactForm').reset();
+        } else {
+            document.getElementById('formResponse').innerText = 'Please fill in all fields.';
+        }
+    });
+
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
